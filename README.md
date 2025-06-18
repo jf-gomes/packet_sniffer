@@ -18,11 +18,11 @@ cd packet_sniffer
 
 ```
 # macOS/Linux
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 
 # Windows
-python3 -m venv venv
+python -m venv venv
 venv\Scripts\activate
 ```
 
@@ -35,7 +35,9 @@ pip install -r requirements.txt
 4. **Run the sniffer (sudo/admin privileges needed)**
 
 ```
-# Capture all packets. Change "wlan0" to your network interface.
+# Change "wlan0" to your network interface.
+
+# Capture all packets.
 sudo python main.py -i wlan0
 
 # Capture only TCP packets.
@@ -58,7 +60,7 @@ packet_sniffer/
 ├── sniffer.py
 ├── requirements.txt
 ├── logs/
-│   └── captured_packets.json
+│   └── captured_packets.json # This will be created when you run the app.
 └── README.md
 ```
 
